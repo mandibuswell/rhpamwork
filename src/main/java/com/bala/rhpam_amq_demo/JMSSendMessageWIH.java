@@ -28,7 +28,7 @@ import org.slf4j.LoggerFactory;
 
 public class JMSSendMessageWIH  extends AbstractLogOrThrowWorkItemHandler implements Cacheable {
 
-    private static final Logger logger = LoggerFactory.getLogger(JMSSendTaskWorkItemHandler.class);
+    private static final Logger logger = LoggerFactory.getLogger(JMSSendMessageWIH.class);
 
     private String connectionFactoryName;
     private String destinationName;
@@ -38,27 +38,27 @@ public class JMSSendMessageWIH  extends AbstractLogOrThrowWorkItemHandler implem
 
     private boolean transacted = false;
 
-    public JMSSendTaskWorkItemHandler() {
+    public JMSSendMessageWIH() {
         this.connectionFactoryName = "java:/JmsXA";
         this.destinationName = "queue/KIE.SIGNAL";
         init();
     }
 
-    public JMSSendTaskWorkItemHandler(String connectionFactoryName,
+    public JMSSendMessageWIH(String connectionFactoryName,
                                       String destinationName) {
         this.connectionFactoryName = connectionFactoryName;
         this.destinationName = destinationName;
         init();
     }
 
-    public JMSSendTaskWorkItemHandler(ConnectionFactory connectionFactory,
+    public JMSSendMessageWIH(ConnectionFactory connectionFactory,
                                       Destination destination) {
         this.connectionFactory = connectionFactory;
         this.destination = destination;
         init();
     }
 
-    public JMSSendTaskWorkItemHandler(String connectionFactoryName,
+    public JMSSendMessageWIH(String connectionFactoryName,
                                       String destinationName,
                                       boolean transacted) {
         this.connectionFactoryName = connectionFactoryName;
@@ -67,7 +67,7 @@ public class JMSSendMessageWIH  extends AbstractLogOrThrowWorkItemHandler implem
         init();
     }
 
-    public JMSSendTaskWorkItemHandler(ConnectionFactory connectionFactory,
+    public JMSSendMessageWIH(ConnectionFactory connectionFactory,
                                       Destination destination,
                                       boolean transacted) {
         this.connectionFactory = connectionFactory;
@@ -76,7 +76,7 @@ public class JMSSendMessageWIH  extends AbstractLogOrThrowWorkItemHandler implem
         init();
     }
 
-    public JMSSendTaskWorkItemHandler(ConnectionFactory connectionFactory,
+    public JMSSendMessageWIH(ConnectionFactory connectionFactory,
                                       Destination destination,
                                       boolean transacted,
                                       boolean doInit) {
