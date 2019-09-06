@@ -9,7 +9,14 @@
     <event-listeners/>
     <task-event-listeners/>
     <globals/>
-    <work-item-handlers/>
+    <work-item-handlers>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.bala.rhpam_amq_demo.JMSSendMessageWIH(new org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory("tcp://localhost:61616"), "rhpam-queue")</identifier>
+            <parameters/>
+            <name>JMSSendTask</name>
+        </work-item-handler>
+    </work-item-handlers>
     <environment-entries/>
     <configurations/>
     <required-roles/>
