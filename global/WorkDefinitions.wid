@@ -89,5 +89,15 @@
     "displayName" : "Milestone",
     "icon" : "defaultmilestoneicon.png",
     "category" : "Milestone"
+    ],
+    
+    [
+    "name" : "JMSSendTask",
+    "parameters" : [
+        "Data" : new StringDataType()
+    ],
+    "displayName" : "JMSSendTask",
+    "icon" : "defaultmilestoneicon.png",
+    "category" : "JMSSendTask"
     ]
 ]
