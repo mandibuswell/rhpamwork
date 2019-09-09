@@ -58,7 +58,8 @@ public class JMSSendMessageWIH  extends AbstractLogOrThrowWorkItemHandler implem
         init();
     }
     
-    public JMSSendTaskWorkItemHandler(ConnectionFactory connectionFactory, String destinationName) {
+    public JMSSendMessageWIH(ConnectionFactory connectionFactory, 
+                                      String destinationName) {
 		this.connectionFactory = connectionFactory;
 		this.destinationName = destinationName;
 		init();
