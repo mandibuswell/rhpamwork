@@ -159,8 +159,8 @@ public class JMSSendMessageWIH  extends AbstractLogOrThrowWorkItemHandler implem
     @Override
     public void executeWorkItem(WorkItem workItem,
                                 WorkItemManager manager) {
-        if (connectionFactory == null || destination == null) {
-            throw new RuntimeException("Connection factory and destination must be set for JMS send task handler");
+        if (connectionFactory == null || (destination == null && queueName == null)) {
+            throw new RuntimeException("Connection factory and destination or connection factory and queue name must be set for JMS send task handler");
         }
 
         Connection connection = null;
