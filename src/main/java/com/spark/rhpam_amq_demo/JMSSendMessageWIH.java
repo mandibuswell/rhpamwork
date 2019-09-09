@@ -1,4 +1,4 @@
-package com.bala.rhpam_amq_demo;
+package com.spark.rhpam_amq_demo;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
