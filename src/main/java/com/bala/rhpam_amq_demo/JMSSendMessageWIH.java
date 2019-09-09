@@ -32,6 +32,7 @@ public class JMSSendMessageWIH  extends AbstractLogOrThrowWorkItemHandler implem
 
     private String connectionFactoryName;
     private String destinationName;
+    private String queueName;
 
     private ConnectionFactory connectionFactory;
     private Destination destination;
@@ -59,9 +60,9 @@ public class JMSSendMessageWIH  extends AbstractLogOrThrowWorkItemHandler implem
     }
     
     public JMSSendMessageWIH(ConnectionFactory connectionFactory, 
-                                      String destinationName) {
+                                      String queueName) {
 		this.connectionFactory = connectionFactory;
-		this.destinationName = destinationName;
+		this.queueName = queueName;
 		init();
 	}
 
@@ -101,7 +102,7 @@ public class JMSSendMessageWIH  extends AbstractLogOrThrowWorkItemHandler implem
             if (this.connectionFactory == null) {
                 this.connectionFactory = (ConnectionFactory) ctx.lookup(connectionFactoryName);
             }
-            if (this.destination == null) {
+            if (this.destination == null && this.queueName == null) {
                 this.destination = (Destination) ctx.lookup(destinationName);
             }
             logger.info("JMS based work item handler successfully activated on destination {}",
@@ -172,6 +173,10 @@ public class JMSSendMessageWIH  extends AbstractLogOrThrowWorkItemHandler implem
 
             Message message = createMessage(workItem,
                                             session);
+            if(this.queueName != null) {
+				  //Perform a lookup on the queue
+				destination = session.createQueue(queueName);
+			}
             producer = session.createProducer(destination);
             producer.send(message);
 
