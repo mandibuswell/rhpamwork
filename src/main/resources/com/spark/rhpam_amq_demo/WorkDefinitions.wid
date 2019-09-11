@@ -95,7 +95,10 @@
     "name" : "JMSSendTask",
     "parameters" : [
         "Data" : new StringDataType(),
-        "SignalProcessInstanceId": newStringDataType()
+        "Signal": new StringDataType(),
+        "SignalProcessInstanceId": new StringDataType(),
+        "SignalWorkItemId" : new StringDataType(),
+        "SignalDeploymentId" : new StringDataType()
     ],
     "displayName" : "JMSSendTask",
     "icon" : "defaultmilestoneicon.png",
