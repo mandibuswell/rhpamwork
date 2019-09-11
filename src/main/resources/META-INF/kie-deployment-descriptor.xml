@@ -14,6 +14,18 @@
             <resolver>mvel</resolver>
             <identifier>new com.spark.rhpam_amq_demo.JMSSendMessageWIH(new org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory("tcp://localhost:61616"), "rhpam-queue")</identifier>
             <parameters/>
+            <name>JMSChargeWallet</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.spark.rhpam_amq_demo.JMSSendMessageWIH(new org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory("tcp://localhost:61616"), "rhpam-queue")</identifier>
+            <parameters/>
+            <name>JMSMaintainCustomerPayment</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.spark.rhpam_amq_demo.JMSSendMessageWIH(new org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory("tcp://localhost:61616"), "rhpam-queue")</identifier>
+            <parameters/>
             <name>JMSSendTask</name>
         </work-item-handler>
     </work-item-handlers>
