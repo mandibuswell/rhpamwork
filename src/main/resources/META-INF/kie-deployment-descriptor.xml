@@ -12,6 +12,12 @@
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
+            <identifier>new com.spark.rhpam_amq_demo.JMSSendMessageWIH(new org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory("tcp://localhost:61616"), "notify-customer")</identifier>
+            <parameters/>
+            <name>JMSNotifyCustomer</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
             <identifier>new com.spark.rhpam_amq_demo.JMSSendMessageWIH(new org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory("tcp://localhost:61616"), "rhpam-chargewallet")</identifier>
             <parameters/>
             <name>JMSChargeWallet</name>
