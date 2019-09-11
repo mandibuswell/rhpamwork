@@ -119,5 +119,15 @@
     "displayName" : "JMSMaintainCustomerPayment",
     "icon" : "defaultmilestoneicon.png",
     "category" : "JMSSendTask"
+    ],
+    
+     [
+    "name" : "JMSNotifyCustomer",
+    "parameters" : [
+        "Data" : new StringDataType()
+    ],
+    "displayName" : "JMSNotifyCustomer",
+    "icon" : "../../../../../../global/defaultemailicon.gif.png",
+    "category" : "JMSSendTask"
     ]
 ]
