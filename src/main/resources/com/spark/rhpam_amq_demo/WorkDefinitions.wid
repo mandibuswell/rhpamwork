@@ -127,7 +127,7 @@
         "Data" : new StringDataType()
     ],
     "displayName" : "JMSNotifyCustomer",
-    "icon" : "../../../../../../global/defaultemailicon.gif",
+    "icon" : "defaultemailicon.gif",
     "category" : "JMSSendTask"
     ]
 ]
