@@ -4,7 +4,7 @@
       <include>true</include>
       <metadata>
         <id>local</id>
-        <url>/home/mbuswell/.m2/repository</url>
+        <url>/home/bbalasub/.m2/repository</url>
         <source>LOCAL</source>
       </metadata>
     </repository>
