@@ -91,7 +91,15 @@
     "category" : "Milestone"
     ],
     
-
+    [
+    "name" : "JMSSendTask",
+    "parameters" : [
+        "Data" : new StringDataType()
+    ],
+    "displayName" : "JMSSendTask",
+    "icon" : "defaultmilestoneicon.png",
+    "category" : "JMSSendTask"
+    ],
      [
     "name" : "JMSChargeWallet",
     "parameters" : [
