@@ -94,8 +94,7 @@
     [
     "name" : "JMSSendTask",
     "parameters" : [
-        "Data" : new StringDataType(),
-        "Data2" : new StringDataType()
+        "Data" : new StringDataType()
     ],
     "displayName" : "JMSSendTask",
     "icon" : "defaultmilestoneicon.png",
