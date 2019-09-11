@@ -99,5 +99,25 @@
     "displayName" : "JMSSendTask",
     "icon" : "defaultmilestoneicon.png",
     "category" : "JMSSendTask"
+    ],
+    
+     [
+    "name" : "JMSChargeWallet",
+    "parameters" : [
+        "Data" : new StringDataType()
+    ],
+    "displayName" : "JMSChargeWallet",
+    "icon" : "defaultmilestoneicon.png",
+    "category" : "JMSSendTask"
+    ],
+    
+     [
+    "name" : "JMSMaintainCustomerPayment",
+    "parameters" : [
+        "Data" : new StringDataType()
+    ],
+    "displayName" : "JMSMaintainCustomerPayment",
+    "icon" : "defaultmilestoneicon.png",
+    "category" : "JMSSendTask"
     ]
 ]
